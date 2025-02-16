@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.backHeader{
+  display: flex;
+  background-color: #257125;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: #fff;
+  
+}
+
+.backHeader h1{
+  margin: 0;
+  height: 50px;
+}
