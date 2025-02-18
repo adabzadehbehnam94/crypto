@@ -1,21 +1,25 @@
 .container {
   width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .mainBoard{
-  border: 2px solid #292929;
+  /* border: 2px solid #292929; */
+  box-shadow: 0 0 4px 0;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
 }
 
 .cryptoItem{
+  display: flex;
+  align-items: center;
   box-shadow: 0 0 4px 0;
   border-radius: 10px;
   padding: 10px;
   margin: 10px 0;
-  /* text-align: center; */
+  text-align: left;
 }
 
 .cryptoItem span{
@@ -25,4 +29,13 @@
 .cryptoItem img{
   margin-right: 10px;
   
+}
+
+.search{
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 3px 0;
+  padding: 10px;
+  margin-top: 10px;
+  width: 50vw;
 }
