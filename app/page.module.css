@@ -230,6 +230,9 @@ a.secondary {
   .cryptoItem{
     font-size: 10px;
   }
+  .container {
+    width: 100%;
+  }
   
 }
 
