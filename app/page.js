@@ -44,7 +44,7 @@ export default function Home() {
             <span className="">{item.symbol.toUpperCase()}</span>
             <span className="">{item.name}</span>
             <span className="">{item.current_price}</span>
-            <span className="" style={{color : priceColor(item.price_change_24h)}}>{item.price_change_24h.toFixed(3)}</span>
+            <span className="" style={{color : priceColor(item.price_change_24h)}}>{item.price_change_24h?.toFixed(3)}</span>
             <span className="">{item.market_cap.toLocaleString()}</span>
           </div>
         ))}
