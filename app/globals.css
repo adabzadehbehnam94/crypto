@@ -1,4 +1,6 @@
-:root {
+@import "tailwindcss";
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -39,25 +41,14 @@ a {
   html {
     color-scheme: dark;
   }
-}
-
+} */
+/*
 
 /* my styles */
-*{
-  margin: 0;
-  padding: 0;
-}
+
 .backHeader{
-  display: flex;
-  background-color: #257125;
-  justify-content: center;
-  align-items: center;
+  background-color: #020a1b;
   height: 100px;
   color: #fff;
-  
-}
-
-.backHeader h1{
-  margin: 0;
-  height: 50px;
-}
+  border-bottom: 2px solid #0a1223 ;
+} 

@@ -169,11 +169,11 @@ a.secondary {
 
 
 /* my style /////////////////////////////////////////////////// */
-.container {
+/* .container {
   width: 1200px;
   margin: 0 auto;
   text-align: center;
-}
+} */
 
 .mainBoard{
   /* border: 2px solid #292929; */
@@ -204,20 +204,20 @@ a.secondary {
 
 .search{
   border-radius: 10px;
-  border: none;
-  box-shadow: 0 0 3px 0;
+  border: 2px solid #131c2b;
+  background-color: #0a1322;
   padding: 10px;
   margin-top: 10px;
-  width: 50vw;
+  width: 500px;
 }
 
 /* responsive /////////////////////////////////// */
 
-@media screen and (min-width: 480px) and (max-width : 1199px){
+/* @media screen and (min-width: 480px) and (max-width : 1199px){
   .container{
     width: 100%;
   }
-}
+} */
 
 @media screen and (min-width: 550px) and (max-width : 699px){
   .cryptoItem{
@@ -230,9 +230,9 @@ a.secondary {
   .cryptoItem{
     font-size: 10px;
   }
-  .container {
+  /* .container {
     width: 100%;
-  }
+  } */
   
 }
 
