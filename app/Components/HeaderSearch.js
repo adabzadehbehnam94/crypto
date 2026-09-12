@@ -1,6 +1,5 @@
 import { useContext, useState } from "react"
 import styles from "../page.module.css";
-import { handleSearch, search } from "./search";
 import { Context } from "../page";
 
 export default function HeaderSearch() {
