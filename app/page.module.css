@@ -1,4 +1,4 @@
-.page {
+/* .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
@@ -109,7 +109,7 @@ a.secondary {
 }
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
+/* @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
     background: var(--button-primary-hover);
     border-color: transparent;
@@ -165,7 +165,7 @@ a.secondary {
   .logo {
     filter: invert();
   }
-}
+}  */
 
 
 /* my style /////////////////////////////////////////////////// */
@@ -176,8 +176,7 @@ a.secondary {
 } */
 
 .mainBoard{
-  /* border: 2px solid #292929; */
-  box-shadow: 0 0 4px 0;
+  background-color: #050f1f;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
@@ -191,6 +190,7 @@ a.secondary {
   padding: 10px;
   margin: 10px 0;
   text-align: left;
+  color: #b4b7bc;
 }
 
 .cryptoItem span{
