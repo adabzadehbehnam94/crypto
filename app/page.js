@@ -5,6 +5,7 @@ import { fetchData, DataForProfitAndLoss } from "./Components/serverAction";
 import Image from "next/image";
 import { createContext, useEffect, useState } from "react";
 import HeaderSearch from "./Components/HeaderSearch";
+import TrendingCoins from "./Components/trendingCoins";
 
 
 export const Context = createContext()
@@ -136,6 +137,8 @@ export default function Home() {
 
         <div className="container mx-auto px-5 ">
           <HeaderSearch />
+          <TrendingCoins data={coins} />
+          
           <div className="grid grid-cols-4 gap-3">
             <div className={`${styles.mainBoard} col-span-3 border-2 border-[#0f1828]`}>
               {searchCoin.map((item) => (
@@ -160,7 +163,7 @@ export default function Home() {
                 {gainersArray(gainersData).slice(0, 5).map((item) => (
                   <div key={item.id} className="flex justify-between mb-3">
                     <div className="flex gap-2">
-                      <p>{gainersArray(gainersData).indexOf(item)+1}</p>
+                      <p>{gainersArray(gainersData).indexOf(item) + 1}</p>
                       <Image alt="image" src={item.image} width={30} height={30} />
                       <p>{item.name}</p>
                       <p>({item.symbol})</p>
@@ -173,10 +176,10 @@ export default function Home() {
               <div className="text-white">
                 <h3 className="text-2xl mb-4">top Losers</h3>
                 {losersArray(losersData).slice(0, 5).map((item) => (
-        
+
                   <div key={item.id} className="flex justify-between  mb-3">
                     <div className="flex gap-2">
-                      <p>{losersArray(losersData).indexOf(item)+1}</p>
+                      <p>{losersArray(losersData).indexOf(item) + 1}</p>
                       <Image alt="image" src={item.image} width={30} height={30} />
                       <p>{item.name}</p>
                       <p>({item.symbol})</p>
