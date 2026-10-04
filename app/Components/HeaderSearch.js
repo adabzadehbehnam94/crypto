@@ -1,6 +1,6 @@
 import { useContext, useState } from "react"
 import styles from "../page.module.css";
-import { Context } from "../page";
+import { Context } from "../main";
 
 export default function HeaderSearch() {
 
