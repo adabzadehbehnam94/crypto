@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image";
+import { priceColor } from "./functions";
 
 export default function TrendingCoins({data}) {
    
@@ -19,7 +20,7 @@ export default function TrendingCoins({data}) {
                             </div>
                         </div>
                         <p className="mb-3">${item.current_price}</p>
-                        <p>{item.price_change_percentage_24h}%</p>
+                        <p style={{color : priceColor(item.price_change_percentage_24h)}}>{item.price_change_percentage_24h.toFixed(2)}%</p>
                     </div>
                 ))}
             </div>

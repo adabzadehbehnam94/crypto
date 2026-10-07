@@ -1,7 +1,7 @@
 "use client"
 
 import styles from "./page.module.css";
-import { fetchData, DataForProfitAndLoss } from "./Components/serverAction";
+import { priceColor } from "./Components/functions";
 import Image from "next/image";
 import { createContext, useEffect, useState } from "react";
 import HeaderSearch from "./Components/HeaderSearch";
@@ -11,7 +11,7 @@ import TotalMarket from "./Components/totalMarket";
 
 export const Context = createContext()
 
-export default function Main({data , gainAndLos}) {
+export default function Main({data , gainAndLos , totalMarket , fearAndGreedIndex}) {
   const [coins, setcoins] = useState(data)
 
 
@@ -108,17 +108,6 @@ export default function Main({data , gainAndLos}) {
   }
 
 
-  const priceColor = (price) => {
-
-    if (price < 0) {
-      return "#f52c39"
-    }
-    if (price > 0) {
-      return "#38a650"
-    } else {
-      return "black"
-    }
-  }
 
   return (
     <Context.Provider value={{ search, setsearch, handleSearch, searchCoin }}>
@@ -126,7 +115,7 @@ export default function Main({data , gainAndLos}) {
 
         <div className="container mx-auto px-5 ">
           <HeaderSearch />
-          {/* <TotalMarket/> */}
+          <TotalMarket totalMarketData={totalMarket} fearAndGreedData={fearAndGreedIndex}/>
           <TrendingCoins data={coins} />
           
           <div className="grid grid-cols-4 gap-3">
