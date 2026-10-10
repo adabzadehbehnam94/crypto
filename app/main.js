@@ -7,11 +7,12 @@ import { createContext, useEffect, useState } from "react";
 import HeaderSearch from "./Components/HeaderSearch";
 import TrendingCoins from "./Components/trendingCoins";
 import TotalMarket from "./Components/totalMarket";
+import { Line, LineChart, ResponsiveContainer } from "recharts";
 
 
 export const Context = createContext()
 
-export default function Main({data , gainAndLos , totalMarket , fearAndGreedIndex}) {
+export default function Main({ data, gainAndLos, totalMarket, fearAndGreedIndex , marketHistory }) {
   const [coins, setcoins] = useState(data)
 
 
@@ -20,7 +21,7 @@ export default function Main({data , gainAndLos , totalMarket , fearAndGreedInde
   }
   const [search, setsearch] = useState("")
   const [GainAndLos, setGainAndLos] = useState(gainAndLos)
-  
+
 
   const searchCoin = coins.filter((item) => item.name.toLowerCase().includes(search))
 
@@ -115,9 +116,9 @@ export default function Main({data , gainAndLos , totalMarket , fearAndGreedInde
 
         <div className="container mx-auto px-5 ">
           <HeaderSearch />
-          <TotalMarket totalMarketData={totalMarket} fearAndGreedData={fearAndGreedIndex}/>
+          <TotalMarket totalMarketData={totalMarket} fearAndGreedData={fearAndGreedIndex} totalMarketHistory={marketHistory}  />
           <TrendingCoins data={coins} />
-          
+
           <div className="grid grid-cols-4 gap-3">
             <div className={`${styles.mainBoard} col-span-3 border-2 border-[#0f1828]`}>
               {searchCoin.map((item) => (
@@ -132,6 +133,12 @@ export default function Main({data , gainAndLos , totalMarket , fearAndGreedInde
                   <span className="" style={{ color: priceColor(item.price_change_percentage_24h) }}>{`${item.price_change_percentage_24h?.toFixed(3)}%`}</span>
                   <span className="">${item.market_cap.toLocaleString()}</span>
                   <span className="">${item.total_volume.toLocaleString()}</span>
+                  <ResponsiveContainer width={100} height={70}>
+
+                    <LineChart data={item.sparkline_in_7d.price.map((price) => ({ price, }))} className="w-full h-[fit-content]">
+                      <Line dataKey={"price"} type={"monotone"} dot={false} stroke={priceColor(item.price_change_percentage_24h)} strokeWidth={2} />
+                    </LineChart>
+                  </ResponsiveContainer>
                 </div>
               ))}
 
