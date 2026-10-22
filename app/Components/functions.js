@@ -6,7 +6,7 @@ const priceColor = (price) => {
     if (price > 0) {
         return "#38a650"
     } else {
-        return "black"
+        return "#b4b7bc"
     }
 }
 
@@ -41,6 +41,11 @@ const summaryPrice=(number)=>{
 
     return `$${number}`
 }
+
+
+
+
+
 
 
 export { priceColor , fearAndGreed ,summaryPrice }

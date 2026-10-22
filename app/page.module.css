@@ -2,18 +2,13 @@
 .mainBoard{
   background-color: #050f1f;
   border-radius: 10px;
-  margin: 10px;
   padding: 10px;
 }
 
 .cryptoItem{
-  display: flex;
   align-items: center;
-  box-shadow: 0 0 4px 0;
-  border-radius: 10px;
+  border-bottom: 2px solid #0f1828;
   padding: 10px;
-  margin: 10px 0;
-  text-align: left;
   color: #b4b7bc;
 }
 
@@ -32,7 +27,6 @@
   background-color: #0a1322;
   padding: 10px;
   margin-top: 10px;
-  width: 500px;
 }
 
 /* responsive /////////////////////////////////// */
